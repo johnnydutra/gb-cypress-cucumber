@@ -4,6 +4,7 @@ Feature: WebDriverUniversity - Login Page
   Background: The user reaches the login page
     Given I navigate to the WebDriverUniversity homepage
     And I click on the "Login Portal" button
+    And I wait for 5 seconds
 
   @smoke
   Scenario Outline: Login attempt with different credentials
