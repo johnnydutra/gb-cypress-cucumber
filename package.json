@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "full-regression-headed-chrome": "cypress run --headed --browser chrome --spec 'cypress/e2e/*.feature'",
+    "full-regression-headless-chrome": "cypress run  --browser chrome --spec 'cypress/e2e/*.feature'",
+    "contact-us-tests-headed-chrome": "cypress run --headed --browser chrome --spec 'cypress/e2e/contact-us.feature'",
+    "smoke-tests-headed-chrome": "cypress run -e TAGS=\"@smoke\" --headed",
+    "smoke-tests-headless-chrome": "cypress run -e TAGS=\"@smoke\"",
+    "login-and-smoke-pack": "cypress run -e TAGS=\"@smoke or @login\" --headed"
   },
   "repository": {
     "type": "git",

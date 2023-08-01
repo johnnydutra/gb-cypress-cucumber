@@ -1,9 +1,11 @@
+@regression @login
 Feature: WebDriverUniversity - Contact Us Page
 
   Background: Preconditions
     Given I navigate to the WebDriverUniversity homepage
     When I click on the "Contact Us" button
 
+  @smoke
   Scenario: Valid "Contact Us" form submission
     And I type a first name
     And I type a last name
