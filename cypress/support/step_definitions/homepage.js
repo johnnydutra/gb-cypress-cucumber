@@ -11,3 +11,7 @@ Given(`I navigate to the WebDriverUniversity homepage`, () => {
 When(`I click on the "Contact Us" button`, () => {
   cy.removeTargetAndClick('#contact-us');
 });
+
+When(`I click on the "Login Portal" button`, () => {
+  cy.removeTargetAndClick('#login-portal');
+});
