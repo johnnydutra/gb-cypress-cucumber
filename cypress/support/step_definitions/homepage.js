@@ -1,12 +1,8 @@
 /// <reference types="Cypress" />
 
 import { Given, When } from '@badeball/cypress-cucumber-preprocessor';
-import BasePO from '../page-objects/base';
-import HomepagePO from '../page-objects/homepage';
+import HomepagePO from '../page_objects/homepage';
 
-const url = 'http://www.webdriveruniversity.com/';
-
-const base = new BasePO();
 const homepage = new HomepagePO();
 
 Given(`I navigate to the WebDriverUniversity homepage`, () => {
