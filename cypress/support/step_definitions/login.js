@@ -1,21 +1,26 @@
 /// <reference types="Cypress" />
 
 import { Given, Then, When } from '@badeball/cypress-cucumber-preprocessor';
+import LoginPO from '../page_objects/login';
 
 let alertStub;
 
+const login = new LoginPO();
+
+Given('I navigate to the WebDriverUniversity login page', () => {});
+
 When('I input an username {string}', (username) => {
-  cy.get('#text').click().type(username);
+  login.typeUsername(username);
 });
 
 When('I input a password {string}', (password) => {
-  cy.get('#password').click().type(password);
+  login.typePassword(password);
 });
 
 When('I click the "Login" button', () => {
   alertStub = cy.stub();
   cy.on('window:alert', alertStub);
-  cy.get('#login-button').click();
+  login.clickLoginButton();
 });
 
 Then(

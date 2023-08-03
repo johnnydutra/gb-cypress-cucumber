@@ -2,8 +2,9 @@
 Feature: WebDriverUniversity - Login Page
 
   Background: The user reaches the login page
-    Given I navigate to the WebDriverUniversity homepage
-    And I click on the "Login Portal" button
+    # Given I navigate to the WebDriverUniversity homepage
+    # And I click on the "Login Portal" button
+    Given I navigate to the WebDriverUniversity login page
     And I wait for 5 seconds
 
   @smoke
